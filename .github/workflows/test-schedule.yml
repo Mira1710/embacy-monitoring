@@ -2,6 +2,7 @@ name: Scheduled work Print-time
 on:
   schedule:
     - cron: '*/10 * * * *'
+  workflow_dispatch:
 
 jobs:
   print-time:
