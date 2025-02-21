@@ -1,0 +1,11 @@
+name: Scheduled work Print-time
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+
+jobs:
+  print-time:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Print current time
+        run: date
