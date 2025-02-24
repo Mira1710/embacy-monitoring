@@ -33,7 +33,7 @@ func main() {
 	var isSucces bool
 	for index, isFreeSlot := range freeSlotsArray {
 		if isFreeSlot {
-			color.GreenString("Date: %s is free\n", slotsMap[index]["datetime"])
+			fmt.Printf("Date: %s is free\n", slotsMap[index]["datetime"])
 			isSucces = true
 		}
 	}
