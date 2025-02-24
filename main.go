@@ -31,14 +31,18 @@ func main() {
 	freeSlotsArray := doRequest(req, client)
 
 	var isSucces bool
+	var freeSlots []string
 	for index, isFreeSlot := range freeSlotsArray {
 		if isFreeSlot {
 			fmt.Printf("Date: %s is free\n", slotsMap[index]["datetime"])
+			freeSlots = append(freeSlots, slotsMap[index]["datetime"])
 			isSucces = true
 		}
 	}
 
 	if isSucces {
+		fmt.Printf("Success find of free slots")
+		fmt.Printf("Free slots: %s", strings.Join(freeSlots, ", "))
 		os.Exit(1)
 	}
 }
