@@ -1,7 +1,5 @@
 name: Scheduled work Embacy-monitoring
 on:
-  schedule:
-    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 jobs:
